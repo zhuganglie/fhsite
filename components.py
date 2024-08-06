@@ -42,15 +42,15 @@ def format_datetime(dt: datetime):
 
 def blog_header():
     return (
-        Socials(site_name="YZC",
-                title="YZC",
+        Socials(site_name="zhuganglie",
+                title="zhuganglie",
                 description="A personal blog",
-                url="https://yzc.vercel.app",
-                image="/public/images/yzc-teal.svg",
+                url="https://zhuganglie.vercel.app",
+                image="/public/images/zhuganglie.svg",
                 ),
         Header(
             A(Img(
-                cls='borderCircle', alt='YZC', src='/public/images/yzc-teal.svg', width='108', height='108')
+                cls='borderCircle', alt='zhuganglie', src='/public/images/zhuganglie.svg', width='108', height='108')
                 , href='/'),
             # A(H2('YZC'), href="/"),
             P(
@@ -80,7 +80,7 @@ def blog_footer():
             A('Twitter', href='https://twitter.com/zhugangliet'), '|',
           
         ),
-        P(f'All rights reserved {datetime.now().year}, YZC')
+        P(f'All rights reserved {datetime.now().year}, zhuganglie')
     )
 
 def tag(slug: str):
