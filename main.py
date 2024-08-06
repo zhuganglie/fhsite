@@ -92,7 +92,7 @@ def get():
         )
     )
 
-@rt("/tags/{slug}")
+@rt("/tags/{urllib.parse.unquote(slug)}")
 @layout
 def get(slug: str):
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if slug in x.get("tags", [])]
