@@ -1,4 +1,5 @@
 import pathlib
+import urllib.parse
 
 from fasthtml.common import *
 from components import *
@@ -97,7 +98,7 @@ def get(slug: str):
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if slug in x.get("tags", [])]
     return (Title(f"Tag: {slug}"),
         Section(
-            H1(f'Posts tagged with "{slug}" ({len(posts)})'),
+            H1(f'Posts tagged with "{urllib.parse.unquote(slug)}" ({len(posts)})'),
             *posts,
             A("← Back home", href="/"),
         )
