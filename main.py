@@ -32,7 +32,7 @@ def get():
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
     popular = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if x.get("popular", False)]    
     return (
-        Title("YZC"),
+        Title("zhuganglie"),
         Section(
                 H1('Recent Writings'),
                 *posts[:3]
