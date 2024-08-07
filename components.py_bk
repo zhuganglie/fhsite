@@ -41,6 +41,7 @@ def format_datetime(dt: datetime):
     
     return f"{formatted_date} at {formatted_time}"
 
+
 def blog_header():
     return (
         Socials(site_name="zhuganglie",
@@ -55,13 +56,12 @@ def blog_header():
                 , href='/'),
              A(H2('zhuganglie'), href="/"),
             P(
-                A('About', href='/about', data_page="about"), '|', 
-                A('Articles', href='/posts', data_page="posts"), '|',
-                A('Tags', href='/tags', data_page="tags"), '|',
-                A('Search', href='/search', data_page="search")
+                A('About', href='/about', cls="active"),'|', 
+                A('Articles', href='/posts'), '|',
+                A('Tags', href='/tags'), '|',
+                A('Search', href='/search')
             ), style="text-align: center;"
         ))
-
 
 def blog_post(title: str, slug: str, timestamp: str, description: str):
      # Convert the timestamp
@@ -107,27 +107,7 @@ def markdown_page(slug: str):
 
 def Layout(title: str, *args, **kwargs):
     """Layout for the blog, but can be adapted to anything"""
-    return (
-        Title(title), 
-        blog_header(), 
-        Main(*args, **kwargs), 
-        blog_footer(), 
-        Script("""
-        function setActiveLink() {
-          const currentPath = window.location.pathname;
-          const links = document.querySelectorAll('a[data-page]');
-          
-          links.forEach(link => {
-            if (currentPath.includes(link.getAttribute('data-page'))) {
-              link.classList.add('active-link');
-            } else {
-              link.classList.remove('active-link');
-            }
-          });
-        }
-        document.addEventListener('DOMContentLoaded', setActiveLink);
-        """)
-    )
+    return Title(title), blog_header(), Main(*args, **kwargs), blog_footer()
 
 def layout(view_function):
     """Decorator to wrap a view function with a layout"""
