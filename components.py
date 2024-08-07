@@ -30,6 +30,7 @@ def convert_dtstr_to_dt(date_str):
     except (ValueError, TypeError) as e:
         print(f"Error parsing date string: {e}")
         return None
+
 def format_datetime(dt: datetime):
     if dt is None:
         return "Datetime object cannot be None"
@@ -53,7 +54,7 @@ def blog_header():
             A(Img(
                 cls='borderCircle', alt='zhuganglie', src='/public/images/zhuganglie.svg', width='108', height='108')
                 , href='/'),
-            # A(H2('YZC'), href="/"),
+             A(H2('zhuganglie'), href="/"),
             P(
                 A('About', href='/about'),'|', 
                 A('Articles', href='/posts'), '|',
@@ -85,7 +86,7 @@ def blog_footer():
     )
 
 def tag(slug: str):
-    return A(slug, href=f"/tags/{slug}")
+    return A(slug, href=f"/tags/{urllib.parse.unquote(slug)}")
 
 def tag_with_count(slug: str, count: int):
     return A(Span(slug), Small(f"({count})"), href=f"/tags/{urllib.parse.unquote(slug)}")

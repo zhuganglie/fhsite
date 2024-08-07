@@ -99,7 +99,8 @@ def get(slug: str):
     return (Title(f"Tag: {urllib.parse.unquote(slug)}"),
         Section(
             H1(f'Posts tagged with "{urllib.parse.unquote(slug)}" ({len(posts)})'), # moved len(posts) calculation here
-            *posts,            A("← Back home", href="/"),
+            *posts,            
+            A("← Back home", href="/"),
         )
     )
 
