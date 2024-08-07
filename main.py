@@ -95,10 +95,11 @@ def get():
 @rt("/tags/{slug}")
 @layout
 def get(slug: str):
+    decoded_slug = urllib.parse.unquote(slug)
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if slug in x.get("tags", [])]
-    return (Title(f"Tag: {slug}"),
+    return (Title(f"Tag: {decoded_slug}"),
         Section(
-            H1(f'Posts tagged with "{slug}" ({len(posts)})'), # moved len(posts) calculation here
+            H1(f'Posts tagged with "{decoded_slug}" ({len(posts)})'), # moved len(posts) calculation here
             *posts,            
             A("← Back home", href="/"),
         )
