@@ -96,10 +96,16 @@ def get():
 @layout
 def get(slug: str):
     decoded_slug = urllib.parse.unquote(slug)
-    posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if slug in x.get("tags", [])]
+    print(f"Decoded slug: {decoded_slug}")  # Debug print
+    posts = []
+    for x in list_posts():
+        print(f"Post tags: {x.get('tags', [])}")  # Debug print
+        if decoded_slug in x.get("tags", []):
+            posts.append(blog_post(title=x["title"], slug=x["slug"], timestamp=x["date"], description=x.get("description", "")))
+    print(f"Number of matching posts: {len(posts)}")  # Debug print
     return (Title(f"Tag: {decoded_slug}"),
         Section(
-            H1(f'Posts tagged with "{decoded_slug}" ({len(posts)})'), # moved len(posts) calculation here
+            H1(f'Posts tagged with "{decoded_slug}" ({len(posts)})'),
             *posts,            
             A("← Back home", href="/"),
         )
