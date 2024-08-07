@@ -86,10 +86,10 @@ def blog_footer():
     )
 
 def tag(slug: str):
-    return A(slug, href=f"/tags/{urllib.parse.quote(slug)}")
+    return A(slug, href=f"/tags/{slug}")
 
 def tag_with_count(slug: str, count: int):
-    return A(Span(slug), Small(f"({count})"), href=f"/tags/{urllib.parse.quote(slug)}")
+    return A(Span(slug), Small(f"({count})"), href=f"/tags/{slug}")
 
 def markdown_page(slug: str):
     try:
