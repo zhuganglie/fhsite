@@ -4,6 +4,7 @@ from datetime import datetime
 from dateutil import parser
 import pytz
 import pathlib
+import urllib.parse
 import yaml
 
 __all__ = ['blog_header', 'blog_post', "blog_footer", "tag",
@@ -87,7 +88,7 @@ def tag(slug: str):
     return A(slug, href=f"/tags/{slug}")
 
 def tag_with_count(slug: str, count: int):
-    return A(Span(slug), Small(f"({count})"), href=f"/tags/{slug}")
+    return A(Span(slug), Small(f"({count})"), href=f"/tags/{urllib.parse.unquote(slug)}")
 
 def markdown_page(slug: str):
     try:
