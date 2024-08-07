@@ -53,7 +53,7 @@ def blog_header():
             A(Img(
                 cls='borderCircle', alt='zhuganglie', src='/public/images/zhuganglie_transparent.svg', width='108', height='108')
                 , href='/'),
-             A(H2('zhuganglie'), href="/"),
+             A(H2('ZHUGANGLIE'), href="/"),
             P(
                 A('About', href='/about', data_page="about"), '|', 
                 A('Articles', href='/posts', data_page="posts"), '|',
@@ -81,7 +81,7 @@ def blog_post(title: str, slug: str, timestamp: str, description: str):
 def blog_footer():
     return Footer(Hr(), P(
             A('Email', href='mailto:pyrrhonianpig@gmail.com'), '|',
-            A('Github', href='https://github.com/zhuganglie/'), '|',
+            A('FreeFrom', href='https://freefrom.space/zhuganglie'), '|',
             A('Twitter', href='https://twitter.com/zhugangliet'), '|',
           
         ),
