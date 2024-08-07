@@ -70,6 +70,9 @@ def blog_post(title: str, slug: str, timestamp: str, description: str):
     # Format the timestamp or display an error message
     formatted_timestamp = format_datetime(dt) 
 
+    decoded_title = urllib.parse.unquote(title)
+
+
     return Span(
                 H2(A(title, href=f"/posts/{slug}")),
                 P(description, Br(), Small(Time(format_datetime(convert_dtstr_to_dt(timestamp))))),
