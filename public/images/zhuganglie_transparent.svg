@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Head shape -->
+  <ellipse cx="100" cy="100" rx="80" ry="70" fill="#16213E" stroke="#0F3460" stroke-width="4"/>
+  
+  <!-- Ears -->
+  <path d="M30 80 Q 10 40, 50 30" fill="#0F3460" stroke="#E94560" stroke-width="3"/>
+  <path d="M170 80 Q 190 40, 150 30" fill="#0F3460" stroke="#E94560" stroke-width="3"/>
+  
+  <!-- Eyes -->
+  <circle cx="70" cy="80" r="12" fill="#E94560"/>
+  <circle cx="130" cy="80" r="12" fill="#E94560"/>
+  
+  <!-- Eye shine -->
+  <circle cx="73" cy="77" r="4" fill="#FFFFFF"/>
+  <circle cx="133" cy="77" r="4" fill="#FFFFFF"/>
+  
+  <!-- Snout -->
+  <ellipse cx="100" cy="120" rx="30" ry="25" fill="#0F3460" stroke="#E94560" stroke-width="3"/>
+  
+  <!-- Nostrils -->
+  <circle cx="90" cy="120" r="5" fill="#E94560"/>
+  <circle cx="110" cy="120" r="5" fill="#E94560"/>
+</svg>

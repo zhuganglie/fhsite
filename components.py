@@ -47,11 +47,11 @@ def blog_header():
                 title="zhuganglie",
                 description="A personal blog",
                 url="https://zhuganglie.vercel.app",
-                image="/public/images/zhuganglie.svg",
+                image="/public/images/zhuganglie_transparent.svg",
                 ),
         Header(
             A(Img(
-                cls='borderCircle', alt='zhuganglie', src='/public/images/zhuganglie.svg', width='108', height='108')
+                cls='borderCircle', alt='zhuganglie', src='/public/images/zhuganglie_transparent.svg', width='108', height='108')
                 , href='/'),
              A(H2('zhuganglie'), href="/"),
             P(
