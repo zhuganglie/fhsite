@@ -74,8 +74,10 @@ def blog_post(title: str, slug: str, timestamp: str, description: str):
 
 
     return Span(
+                Small(Time(format_datetime(convert_dtstr_to_dt(timestamp)))),
                 H2(A(decoded_title, href=f"/posts/{slug}")),
-                P(description, Br(), Small(Time(format_datetime(convert_dtstr_to_dt(timestamp))))),
+                P(description), Br(),
+               
         )
 
 def blog_footer():
@@ -102,10 +104,11 @@ def markdown_page(slug: str):
     content = ''.join(text.split("---")[2:])
     metadata = yaml.safe_load(text.split("---")[1])
     return (Title(metadata.get('title', slug)),
-        A("← Back to home", href="/"),
+        
         Section(
             Div(content,cls="marked")
-        )
+        ),
+        A("← Back to home", href="/")
     )
 
 def Layout(title: str, *args, **kwargs):

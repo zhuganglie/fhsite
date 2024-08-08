@@ -1,5 +1,5 @@
 ---
-title: Understanding the Rise of Personalized Rule in China under Xi Jinping
+title: The Rise of Personalized Rule in China under Xi Jinping
 date: "2024-08-03"
 tags: 
     - political science

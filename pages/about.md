@@ -2,6 +2,6 @@
 title: About
 ---
 
-## About Me
+# About Me
 
 I am a simple and stupid person.

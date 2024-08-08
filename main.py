@@ -71,7 +71,7 @@ def get(slug: str):
     return (
         Title(metadata['title']),
         Section(
-            H1(metadata["title"]),
+            H1(metadata["title"], style="margin: 50px 0px 50px 0px; text-align: center;"),
             Div(content,cls="marked"),
             P(Span("Tags: "), *tags),
             A("← Back to all articles", href="/"),
