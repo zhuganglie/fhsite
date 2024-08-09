@@ -53,6 +53,6 @@ LGBTQ+ 权利运动有力地证明了框架如何挑战主流叙事并推动社�
 
 * Sherrill, K. (2010). The Framing of Same-Sex Marriage in the United States. The Journal of Politics, 72(2), 482-498.
 * Snow, D. A., & Benford, R. D. (1988). Ideology, Frame Resonance, and Participant Mobilization. International Social Movement Research, 1, 197-217.
-* Lofland, J. (1996). The Language of Social Movements. University of Califorlia.
+* Lofland, J. (1996). Social Movement Organizations: Guide to Research on Insurgent Realities, Aldine de Gruyter.
 * Gamson, W. A. (1992). Talking Politics. Cambridge University Press.
 * Goffman, E. (1974). Frame analysis: An essay on the organization of experience. Harvard University Press.
