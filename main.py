@@ -75,7 +75,19 @@ def get(slug: str):
             Div(content,cls="marked"),
             P(Span("Tags: "), *tags),
             A("← Back to all articles", href="/"),
+            Hr()
         ),
+    
+        Script("""
+    var script = document.createElement('script');
+    script.src = 'https://utteranc.es/client.js';
+    script.setAttribute('repo', 'zhuganglie/fhsite');
+    script.setAttribute('issue-term', 'pathname');
+    script.setAttribute('theme', 'github-light');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
+    document.querySelector('section').appendChild(script);
+"""),
     )
 
 @rt("/tags")
