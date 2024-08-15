@@ -44,7 +44,7 @@ draft: false
 
 民权运动的案例清楚地展示了政治机会结构对社会运动起源和结果的深远影响。同时，它也凸显了运动领袖和活动家在利用这些机会方面的关键作用。它表明，即使在看似封闭的政治体系中，变革的机会也可能出现，而通过战略动员和持续的行动，社会运动可以抓住这些机会，最终实现目标，推动社会进步。
 
-## Bibliography
+**Bibliography**
 
 * Kriesi, H., Koopmans, R., Duyvendak, J. W., & Giugni, M. G. (1995). New social movements in Western Europe: A comparative analysis. University of Minnesota Press.
 * McAdam, D. (1982). Political process and the development of Black insurgency, 1930-1970. University of Chicago Press.
