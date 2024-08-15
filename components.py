@@ -7,7 +7,7 @@ import pathlib
 import urllib.parse
 import yaml
 
-__all__ = ['blog_header', 'blog_post', "blog_footer", "tag",
+__all__ = ["blog_header", "blog_post", "blog_footer", "tag",
            "tag_with_count", "markdown_page", "Layout", "layout"]
 
 def convert_dtstr_to_dt(date_str):
