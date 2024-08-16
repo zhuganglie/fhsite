@@ -140,7 +140,8 @@ def layout(view_function):
     @functools.wraps(view_function)
     def _wrapper(*args, **kwargs):
         result = view_function(*args, **kwargs)
-        # If there's a Title() in the result at the top level, use it, otherwise use the default
-        title = next((ele[1] for ele in result if ele[0] == "title"), "zhuganglie")
+     ###   # If there's a Title() in the result at the top level, use it, otherwise use the default
+       ### title = next((ele[1] for ele in result if ele[0] == "title"), "zhuganglie")
+        title = "zhuganglie"
         return Layout(title, *result)
     return _wrapper
