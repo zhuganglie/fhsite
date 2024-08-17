@@ -17,7 +17,7 @@ def list_posts(draft: bool = False, posts_dirname="posts") -> list[dict]:
         posts.append(data)
 
     posts = [x for x in filter(lambda x: x["draft"] is False, posts)]
-    #posts.sort(key=lambda x: x["date"], reverse=True)
+    posts.sort(key=lambda x: x["date"], reverse=True)
    
     return [x for x in filter(lambda x: x["draft"] is draft, posts)]
 
