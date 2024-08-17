@@ -142,6 +142,12 @@ def layout(view_function):
         result = view_function(*args, **kwargs)
         # If there's a Title() in the result at the top level, use it, otherwise use the default
        ### title = next((ele[1] for ele in result if ele[0] == "title"), "zhuganglie")
-        title = "zhuganglie"
+        title = "zhuganglie"  #Default
+        # Check if result is iterable and contains Title()
+        if isinstance(result, (list, tuple)):
+            for ele in result:
+                if isinstance(ele, tuple) and ele[0] == "title":
+                    title = ele[1]
+                    break
         return Layout(title, *result)
     return _wrapper
