@@ -9,6 +9,7 @@ from datetime import datetime
 
 hdrs = (
     Script(src="https://unpkg.com/htmx.org@next/dist/htmx.min.js"),
+    # Script(src="https://cdn.tailwindcss.com"),
     MarkdownJS(),
     HighlightJS(langs=['python', 'javascript', 'html', 'css']),
     Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css', type='text/css'),
@@ -24,7 +25,8 @@ exception_handlers = {
     404: not_found
 }
 
-app, rt = fast_app(hdrs=hdrs, default_hdrs=False, debug=True,)
+
+app, rt = fast_app(hdrs=hdrs, default_hdrs=False, debug=True, live=True)
 
 @rt("/")
 @layout
