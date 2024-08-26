@@ -37,7 +37,7 @@ def get():
         Title("zhuganglie"),
         Section(
                 H1('Recent Writings'),
-                *posts[:3]
+                *posts[:5]
             ),
         Hr(),
         Section(
