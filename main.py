@@ -65,10 +65,7 @@ def get():
 @rt("/posts/{slug}")
 @layout
 def get(slug: str):
-    # post = [x for x in filter(lambda x: x["slug"] == slug, list_posts())][0]
     content, metadata = get_post(slug)
-    # content = pathlib.Path(f"posts/{slug}.md").read_text().split("---")[2]
-    # metadata = yaml.safe_load(pathlib.Path(f"posts/{slug}.md").read_text().split("---")[1])    
     tags = [tag(slug=x) for x in metadata.get("tags", [])]
     return (
         Title(metadata['title']),

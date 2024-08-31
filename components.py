@@ -119,7 +119,6 @@ def Layout(title: str, *args, **kwargs):
         function setActiveLink() {
           const currentPath = window.location.pathname;
           const links = document.querySelectorAll('a[data-page]');
-          
           links.forEach(link => {
             if (currentPath.includes(link.getAttribute('data-page'))) {
               link.classList.add('active-link');
