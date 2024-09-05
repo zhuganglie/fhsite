@@ -1,5 +1,5 @@
 ---
-title: 独裁心理学
+title: 独裁统治的心理机制
 date: "2024-09-05"
 tags:
 - 独裁政治
@@ -21,3 +21,8 @@ draft: false
 该书还探讨了**独裁统治的延续性**这一重要问题，探讨了即使在看似被推翻之后，政权如何以不同的形式重新出现。作者认为，这就像野草一样，即使地面上的部分被清除，但根系仍然深深扎在地下，一旦条件成熟，就会再次生长出来。独裁统治也是如此，即使表面上的独裁者被推翻，但支撑独裁统治的土壤，包括社会结构、文化传统、以及人们的心理状态，并没有改变，因此独裁统治很容易卷土重来，以新的形式出现。
 
 《独裁心理学》不是简单地分析独裁者个人的性格和心理特点，而是独辟蹊径把独裁作为一种统治方式，分析其运作的心理机制，为我们理解独裁统治提供了一个全新的视角。这本书为我们敲响了警钟：独裁统治的幽灵从未远离，我们必须时刻保持警惕，捍卫来之不易的自由与民主。
+
+## Bibliography
+
+- Fathali M. Moghaddam, The Psychology of Dictatorship, American Psychological Association, 2013.
+- Here is a video summary of the book by Fathali M. Moghaddam: https://youtu.be/sHe7rfUwi8c?si=qjq5TPo1sE34G2CY
