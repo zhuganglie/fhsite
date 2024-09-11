@@ -32,7 +32,7 @@ app, rt = fast_app(hdrs=hdrs, default_hdrs=False, debug=True, live=True)
 @layout
 def get():
     posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
-    popular = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if x.get("popular", False)]    
+    popular = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
     return (
         Title("zhuganglie"),
         Section(
@@ -52,7 +52,7 @@ def get():
 @layout
 def get():
     posts = [blog_post(title=x["title"], slug=x["slug"], timestamp=x["date"], description=x.get("description", ""))
-             for x in list_posts() if not x.get("draft", False)]
+             for x in list_posts()]
     duration = round((datetime.now() - datetime(2020, 8, 6)).days / 365.25, 2)
     return (
         Title("All posts"),
@@ -94,7 +94,7 @@ def get(slug: str):
 @rt("/tags")
 @layout
 def get():
-    tags = [tag_with_count(slug=x[0], count=x[1]) for x in list_tags().items() if not x.get("draft", False)]
+    tags = [tag_with_count(slug=x[0], count=x[1]) for x in list_tags().items()]
     return (Title("Tags"),
         Section(
             H1('Tags'),
