@@ -51,16 +51,18 @@ def get():
 @rt("/posts")
 @layout
 def get():
-    posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if not x.get("draft", False)]
+    posts = [blog_post(title=x["title"], slug=x["slug"], timestamp=x["date"], description=x.get("description", ""))
+             for x in list_posts() if not x.get("draft", False)]
     duration = round((datetime.now() - datetime(2020, 8, 6)).days / 365.25, 2)
     return (
-            Title("All posts"),
-            Section(
+        Title("All posts"),
+        Section(
             H1(f'All Articles ({len(posts)})'),
             P(f'Everything written for the past {duration} years.'),
             *posts,
             A("← Back to home", href="/"),
-        ),)
+        ),
+    )
 
 @rt("/posts/{slug}")
 @layout
