@@ -1,5 +1,5 @@
 ---
-title: Dissecting the Beast
+title: Dissecting Authoritarian Rule
 date: "2024-09-11"
 tags:
 - authoritarian regime
