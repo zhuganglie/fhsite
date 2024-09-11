@@ -27,3 +27,7 @@ Similarly, the book's focus on elite politics leaves less room for analyzing the
 Overall, "The Politics of Authoritarian Rule" is an essential read for anyone seeking a deeper
 understanding of the inner workings of dictatorships. It provides a comprehensive and insightful framework for analyzing the complex dynamics of power, control, and survival in authoritarian regimes. By meticulously unpacking the strategies and vulnerabilities of these systems, the book offers invaluable lessons for scholars, policymakers, and anyone concerned with the global rise of authoritarianism.
 
+
+## Bibliography
+
+- Milan W. Svolik, The Politics of Authoritarian Rule, Cambridge University Press, 2012
