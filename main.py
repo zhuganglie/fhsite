@@ -51,7 +51,7 @@ def get():
 @rt("/posts")
 @layout
 def get():
-    posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts()]
+    posts = [blog_post(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in list_posts() if not x.get("draft", False)]
     duration = round((datetime.now() - datetime(2020, 8, 6)).days / 365.25, 2)
     return (
             Title("All posts"),
@@ -92,7 +92,7 @@ def get(slug: str):
 @rt("/tags")
 @layout
 def get():
-    tags = [tag_with_count(slug=x[0], count=x[1]) for x in list_tags().items()]
+    tags = [tag_with_count(slug=x[0], count=x[1]) for x in list_tags().items() if not x.get("draft", False)]
     return (Title("Tags"),
         Section(
             H1('Tags'),
