@@ -71,6 +71,7 @@ def get(slug: str):
     tags = [tag(slug=x) for x in metadata.get("tags", [])]
     return (
         Title(metadata['title']),
+        MarkdownJS(), # Added MarkdownJS here
         Section(
             H1(metadata["title"], style="margin: 50px 0px 50px 0px; text-align: center;"),
             Div(content,cls="marked"),
@@ -148,7 +149,7 @@ def get(q: str = ""):
         Section(
             *messages,
             *posts,
-            A("← Back home", href="/"),
+            A("← Back to home", href="/"),
         )
     ), onload="document.getElementById('search').focus()"), blog_footer()
 
